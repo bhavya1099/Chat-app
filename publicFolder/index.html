@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web socket client</title>
+    <style>
+      .message {
+        list-style: none;
+      }
+      .receiver {
+        background-color: lightgreen;
+        padding: 10px;
+        width: 50%;
+        border: 1px solid;
+        margin-left: 30px;
+      }
+      .sender {
+        background-color: lightgrey;
+        border: 1px solid;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chat Demo</h1>
+    <img src="lorem-picsum.jpeg" />
+    <div>
+      <input type="text" class="msg" />
+      <button class="send">send message</button>
+    </div>
+    <div>
+      <input type="text" class="recieverSocket" />
+      <button class="addSocket">Send private message</button>
+    </div>
+    <button id="createGrp">Create Grp</button>
+    <button id="joinGrp">Join Grp</button>
+    <button id="stg">Send to Grp</button>
+    <button id="leave">Leave Grp</button>
+    <ul class="messages"></ul>
+    <script
+      src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+      integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <!-- <script src="">
+      const scriptTag = io();
+    </script> -->
+    <script src="script.js"></script>
+  </body>
+</html>
